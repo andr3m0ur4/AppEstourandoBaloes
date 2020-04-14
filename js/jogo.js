@@ -66,7 +66,7 @@ function iniciarJogo() {
 function contagemTempo(segundos) {
 	segundos--
 
-	if (segundos === -1) {
+	if (segundos < 0) {
 		clearTimeout(timerId)	// para a execução da função do setTimeout
 		fimJogo()
 		return false
@@ -81,6 +81,13 @@ function contagemTempo(segundos) {
 
 function fimJogo() {
 	alert('Fim de jogo, você não conseguiu estourar todos os balões a tempo')
+
+	var cenario = document.getElementById('cenario')
+	var baloes = cenario.querySelectorAll('img')
+	
+	baloes.forEach(function(balao) {
+		balao.setAttribute('onclick', '')
+	})
 }
 
 function criarBaloes(qtd_baloes) {
