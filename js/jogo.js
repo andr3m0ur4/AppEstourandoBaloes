@@ -1,12 +1,15 @@
 // carregar eventos na página
 window.onload = function() {
-	if (location.pathname === '/' || location.pathname === '/index.html') {
+	var path = location.pathname.split('/')
+	path = path.slice(path.length - 1).toString()
+
+	if (path === '' || path === 'index.html') {
 		document.getElementById('iniciar').onclick = function() {
 			dificuldadeJogo()
 		}
 	}
 
-	if (location.pathname === '/jogo.html') {
+	if (path === 'jogo.html') {
 		iniciarJogo()
 	}
 }
