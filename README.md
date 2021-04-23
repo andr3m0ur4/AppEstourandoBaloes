@@ -1,2 +1,7 @@
-# AppEstourandoBaloes
- Aplicação web de um jogo para estourar balões, sendo desenvolvida utilizando Javascript .
+# AppEstourandoBaloes :balloon:
+
+Game's web application to burst baloons, it was developed using JavaScript.
+
+## Installation
+
+Clone the project on your computer, so open the root directory in your Browser and have fun. :smiley:

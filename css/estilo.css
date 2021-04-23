@@ -1,10 +1,15 @@
 main {
-	float: left;
+	display: flex;
+}
+
+section {
 	width: auto;
 	height: 500px;
 	background: #fff;
 	border: 1px solid #a2a2a2;
 	margin-right: 5px;
+	display: flex;
+	flex-direction: column;
 }
 
 .caixa {
@@ -12,10 +17,6 @@ main {
 	align-items: center;
 	justify-content: space-around;
 	margin-bottom: 20px;
-}
-
-.item {
-	
 }
 
 span#baloes_inteiros, span#baloes_estourados {
@@ -35,8 +36,8 @@ div#cronometro span {
 }
 
 div#cenario {
-	float: left;
 	width: 600px;
+	min-width: 600px;
 	height: 500px;
 	background: url('../imagens/cenario.png');
 	background-position: bottom;
@@ -45,4 +46,18 @@ div#cenario {
 
 div#cenario img {
 	margin-right: 14px !important;
+}
+
+@media (max-width: 760px) {
+	main {
+		flex-direction: column;
+	}
+
+	section {
+		flex-direction: row;
+		justify-content: space-around;
+		height: auto;
+		width: 600px;
+		margin-bottom: 14px;
+	}
 }

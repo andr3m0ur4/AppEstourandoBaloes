@@ -2,44 +2,41 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
-
 		<title>Estourando Balões</title>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" type="text/css" href="./css/estilo.css">
-
 		<script src="./js/jogo.js"></script>
 	</head>
 	<body>
 
 		<main>
-			<div class="caixa">
-				<div class="item">
-					<img src="./imagens/balao_azul_grande.png">
+			<section>
+				<div class="caixa">
+					<div class="item">
+						<img src="./imagens/balao_azul_grande.png">
+					</div>
+					<div class="item">
+						<span id="baloes_inteiros"></span>
+					</div>
 				</div>
-				<div class="item">
-					<span id="baloes_inteiros"></span>
-				</div>
-			</div>
-
-			<div class="caixa">
-				<div>
-					<img src="./imagens/balao_azul_grande_estourado.png">
-				</div>
-				<div>
-					<span id="baloes_estourados"></span>
-				</div>
+				<div class="caixa">
+					<div>
+						<img src="./imagens/balao_azul_grande_estourado.png">
+					</div>
+					<div>
+						<span id="baloes_estourados"></span>
+					</div>
 				
-			</div>
-
-			<div class="caixa" id="cronometro">
-				<div>
-					<span id="tempo_cronometro"></span>
 				</div>
-			</div>
-			
-		</main>
+				<div class="caixa" id="cronometro">
+					<div>
+						<span id="tempo_cronometro"></span>
+					</div>
+				</div>
+			</section>
 
-		<div id="cenario"></div>
+			<div id="cenario"></div>
+		</main>
 
 	</body>
 </html>

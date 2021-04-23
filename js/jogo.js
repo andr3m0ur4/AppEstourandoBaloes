@@ -1,30 +1,20 @@
 // carregar eventos na página
 window.onload = function() {
-	var arquivo = extrairArquivo(location.pathname)
-
-	if (arquivo === 'index.html') {
+	if (location.pathname === '/' || location.pathname === '/index.html') {
 		document.getElementById('iniciar').onclick = function() {
 			dificuldadeJogo()
 		}
 	}
 
-	if (arquivo === 'jogo.html') {
+	if (location.pathname === '/jogo.html') {
 		iniciarJogo()
 	}
-}
-
-// Função para extrair o nome do arquivo
-function extrairArquivo(caminho){
-	caminho	= caminho.replace("/\/g", '/')
-	let arquivo = caminho.substring(caminho.lastIndexOf('/') + 1)
-	
-	return arquivo
 }
 
 function dificuldadeJogo() {
 	var nivel_jogo = document.getElementById('nivel_jogo').value
 
-	window.location.href = 'jogo.html?' + nivel_jogo
+	window.location.href = './jogo.html?' + nivel_jogo
 }
 
 var timerId = null	// varável que armazeana a chamada da função timeout
@@ -118,8 +108,8 @@ function pontuacao(acao) {
 	var baloes_inteiros = parseInt(document.getElementById('baloes_inteiros').innerHTML)
 	var baloes_estourados = parseInt(document.getElementById('baloes_estourados').innerHTML)
 
-	baloes_inteiros = baloes_inteiros + acao
-	baloes_estourados = baloes_estourados - acao
+	baloes_inteiros += acao
+	baloes_estourados -=  acao
 
 	document.getElementById('baloes_inteiros').innerHTML = baloes_inteiros
 	document.getElementById('baloes_estourados').innerHTML = baloes_estourados
